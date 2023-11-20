@@ -1,0 +1,72 @@
+@use '../scss/abstracts/' as *;
+
+.main {
+    padding-left: $sideBarWidth;
+    overflow-x: hidden;
+
+    @include tablet {
+        padding-left: 0;
+        width: 100vw;
+    }
+
+    &__content {
+        min-height: 100vh;
+        padding: $spacing;
+        transition: all 0.5s ease-in-out;
+
+        @include tablet {
+            padding: $mobileSpacing;
+            position: relative;
+            background-color: $bodyBg;
+            z-index: 100;
+        }
+    }
+}
+
+.sidebar-open .main__content {
+    height: 100vh;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    transform: scale(0.8) translateX(50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+    background: "white"  }
+  
+  .login-container h2 {
+    margin-bottom: 20px;
+    color:  "black";
+  }
+  
+  .login-container input {
+    margin: 10px;
+    border-radius: 10px;
+    border-style: solid ;
+    width: 250px;
+    background: none;
+    padding: 15px;
+  }
+  
+  .login-container button {
+    margin: 20px;
+    padding: 10px;
+    background: linear-gradient(to right, #E54980, #F47E4A);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+  }
+  
+  .login-container button:hover {
+    background-color: #e4cdcd;
+    color: #000000;
+  }
+  

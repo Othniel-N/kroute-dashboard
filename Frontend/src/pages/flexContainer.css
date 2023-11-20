@@ -1,0 +1,88 @@
+/* FlexContainer.css */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-box1 {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    /* background-color: #6a3fad; */
+    background-color: #972239;
+background-image: linear-gradient(315deg, #972239 0%, #db6885 74%);
+    border-radius: 10px;
+    height: 200px;
+}
+
+.flex-box2 {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #6247aa;
+background-image: linear-gradient(316deg, #6247aa 0%, #a594f9 74%);
+    height: 200px;
+}
+
+.flex-box3 {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #6c33a3;
+background-image: linear-gradient(316deg, #3dac94 0%, rgb(61, 221, 176) 74%);
+    height: 200px;
+}
+
+.flex-box4 {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: center;
+    height: 100px;
+}
+
+.pendingpods {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: center;
+    text-align: center;
+}
+
+.pp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+.blinking-text {
+    animation: blink 10s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  

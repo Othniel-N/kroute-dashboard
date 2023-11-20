@@ -1,0 +1,28 @@
+.services-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .services-table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .services-table th, .services-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .services-table th {
+    background-color: #000000;
+    color: #ffff;
+  }
+  .selectbutton{
+    background-color: black;
+    color: #ffff;
+    border: 10;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+  }
