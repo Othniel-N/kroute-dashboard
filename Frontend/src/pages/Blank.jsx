@@ -5,12 +5,8 @@ import PodsinEach from '../components/Noofpods';
 const Blank = () => {
     return (
         <div>
-            <h1>This is a blank page</h1>
-            <ServiceChart />
-            {/* Render other components or UI elements as needed */}
-            {/* <FlexContainerd data={data} /> */}
-            <PodsinEach/>
-
+            <h1>Welcome to kroute dashboard !</h1>
+            <p>Read Our Github pages to know about the setting of alerts, user and password settings</p>
         </div>
     );
 };

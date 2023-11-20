@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Chart from 'chart.js/auto';
 import axios from 'axios';
+import apiconfig from '../configs/endpointconfig';
 
 const BarChart = () => {
   const chartRef = useRef(null);
@@ -16,7 +17,7 @@ const BarChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://192.168.0.66:4000/api/namespaces/service');
+        const response = await axios.get(apiconfig.apiUrl5);
         const newData = response.data;
 
         const transformedData = {

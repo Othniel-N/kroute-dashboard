@@ -5,11 +5,11 @@ const UserInfo = ({ user }) => {
     return (
         <div className='user-info'>
             <div className="user-info__img">
-                <img src={user.img} alt="" />
+                <img src={user.img} alt=""  style={{width: '50px', marginLeft: '8px', alignItems: 'center', justifyContent: 'center'}}/>
             </div>
-            <div className="user-info__name">
+            {/* <div className="user-info__name">
                 <span>{user.name}</span>
-            </div>
+            </div> */}
         </div>
     )
 }

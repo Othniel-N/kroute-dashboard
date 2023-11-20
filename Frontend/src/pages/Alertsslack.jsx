@@ -3,7 +3,7 @@ import Alerts from '../components/Alerts'
 
 const Alertsslack = () => {
   return (
-    <div>Alertsslack
+    <div>
         <Alerts/>
     </div>
     

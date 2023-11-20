@@ -16,10 +16,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<Dashboard />} />
-                    <Route path="orders" element={<Blank />} />
+                    <Route path="Docs" element={<Blank />} />
                     <Route path="services" element={<Services/>} />
                     <Route path="pendingpods" element={<Pendingpodpage/>} />
-                    <Route path="settings" element={<Loginpage/>} />
+                    {/* <Route path="settings" element={<Loginpage/>} /> */}
                     <Route path="alerts" element={<Alertsslack />} />
                 </Route>
             </Routes>

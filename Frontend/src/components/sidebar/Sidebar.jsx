@@ -49,7 +49,7 @@ const Sidebar = ({ handleLogout }) => {
                     <div className="sidebar__menu__item__icon">
                         <i className='bx bx-log-out' style={{ color: '#ffff' }}></i>
                     </div>
-                    <div className="sidebar__menu__item__txt" style={{ color: '#ffff' }} >Logout</div>
+                    <div className="sidebar__menu__item__txt" style={{ color: '#FF9066' }} >Logout</div>
                 </button>
 
             </div>

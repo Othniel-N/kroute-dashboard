@@ -34,7 +34,7 @@ async function checkAndNotify() {
     });
 
     // Extract relevant information for each pod
-    // Extract relevant information for each pod
+  // Extract relevant information for each pod
 const podInfo = await Promise.all(relevantPods.map(async (pod) => {
   const podName = pod.metadata.name;
   const namespace = pod.metadata.namespace;
@@ -58,7 +58,6 @@ const podInfo = await Promise.all(relevantPods.map(async (pod) => {
     return `*PodName:* ${podName}\n*Namespace:* ${namespace}\n*Phase:* ${pod.status.phase}\n*Reason:* Not available\n\n`;
   }
 }));
-
 
     // Retrieve information about nodes
     const nodeResponse = await k8sApi.listNode();
@@ -95,23 +94,7 @@ process.on('SIGINT', () => {
   clearInterval(intervalId);
   process.exit();
 });
-const podInfo = await Promise.all(relevantPods.map(async (pod) => {
-  const podName = pod.metadata.name;
-  const namespace = pod.metadata.namespace;
 
-  // Retrieve detailed information for the pod
-  const podDetailsResponse = await k8sApi.readNamespacedPod(podName, namespace);
-
-  const reason = podDetailsResponse.body.status.containerStatuses.map((containerStatuses) => {
-    if (containerStatuses.state && containerStatuses.state.waiting) {
-      return containerStatuses.state.waiting.reason;
-    } else {
-      return null;
-    }
-  }).filter((item) => item !== null).join(', ');
-
-  return `*PodName:* ${podName}\n*Namespace:* ${namespace}\n*Phase:* ${pod.status.phase}\n*Reason:* \`${reason}\`\n\n`;
-}));
 process.on('SIGTERM', () => {
   clearInterval(intervalId);
   process.exit();

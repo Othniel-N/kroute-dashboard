@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FlexContainerd from '../components/Podschart';
+import apiconfig from '../configs/endpointconfig';
 
 const PodsinEach = () => {
 
@@ -9,7 +10,7 @@ const PodsinEach = () => {
       // Simulate fetching data from the backend
       const fetchData = async () => {
         try {
-          const response = await fetch('http://192.168.0.66:4000/api/namespaces/namespace-pod-count'); // Replace with your actual API endpoint
+          const response = await fetch(apiconfig.apiUrl1); // Replace with your actual API endpoint
           const jsonData = await response.json();
   
           // Convert the received data to a format that FlexContainer can handle

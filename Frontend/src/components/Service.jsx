@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Service.css'; // Import your CSS file
+import apiconfig from '../configs/endpointconfig';
 
 const ServicesList = () => {
   const [serviceData, setServiceData] = useState([]);
@@ -10,7 +11,7 @@ const ServicesList = () => {
     const fetchData = async () => {
       // Replace with your actual data fetching logic
       // For now, using a mock API endpoint
-      const response = await fetch('http://192.168.0.66:4000/api/services');
+      const response = await fetch(apiconfig.apiUrl4);
       const jsonData = await response.json();
       setServiceData(jsonData);
     };

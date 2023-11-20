@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Service.css'
+import apiconfig from '../configs/endpointconfig';
 
 const PodTable = () => {
   const [data, setData] = useState([]);
@@ -10,7 +11,7 @@ const PodTable = () => {
     // Fetch data from the backend when the component mounts
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.0.68:4000/api/services/ppods'); // Update the URL according to your backend setup
+        const response = await fetch(apiconfig.apiUrl2); // Update the URL according to your backend setup
         const result = await response.json();
         setData(result.pendingPods);
       } catch (error) {
@@ -26,7 +27,7 @@ const PodTable = () => {
     // Fetch data from the backend when the component mounts
     const fetchData = async () => {
       try {
-        const response = await fetch('http://192.168.0.68:4000/api/services/running-pods-not-ready'); // Update the URL according to your backend setup
+        const response = await fetch(apiconfig.apiUrl3); // Update the URL according to your backend setup
         const result = await response.json();
         setData1(result.runningPodsNotReady);
       } catch (error) {

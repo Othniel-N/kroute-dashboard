@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { data } from '../constants';
 import Axios from 'axios'
+import apiconfig from '../configs/endpointconfig';
 
 const Home = () => {
 
     const [data, setData] = useState([])
 
     const getData = async () => {
-        const response = await Axios.get("http://192.168.0.66:4000/api/namespaces/")
+        const response = await Axios.get(apiconfig.apiUrl6)
         setData(response.data);
     }
 

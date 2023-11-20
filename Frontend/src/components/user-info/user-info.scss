@@ -3,9 +3,9 @@
 .user-info {
     @include flex(center, flex-start);
     background-color: $mainBg;
-    border-radius: $borderRadius;
-    height: 50px;
-    width: max-content;
+    border-radius: 20px;
+    height: 60px;
+    width: 60px;
 
     &__img {
         --size: 50px;

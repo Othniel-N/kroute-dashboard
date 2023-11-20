@@ -3,6 +3,7 @@ import './flexContainer.css';
 import axios from 'axios';
 import BarChart from '../components/serviceChart';
 import PodsinEach from '../components/Noofpods';
+import apiconfig from '../configs/endpointconfig';
 
 const FlexContainer = () => {
 
@@ -14,10 +15,9 @@ const FlexContainer = () => {
 
     useEffect(() => {
         // Define the URL of your backend API
-        const apiUrl = 'http://192.168.0.66:4000/api/namespaces/totalpods';
 
         // Fetch data using Axios
-        axios.get(apiUrl)
+        axios.get(apiconfig.apiUrl7)
             .then(response => {
                 // Update the state with the fetched data
                 setData(response.data);
@@ -29,10 +29,9 @@ const FlexContainer = () => {
 
     useEffect(() => {
         // Define the URL of your backend API
-        const apiUrl = 'http://192.168.0.66:4000/api/namespaces/pendingpods';
 
         // Fetch data using Axios
-        axios.get(apiUrl)
+        axios.get(apiconfig.apiUrl8)
             .then(response => {
                 // Update the state with the fetched data
                 setPending(response.data)
@@ -44,10 +43,9 @@ const FlexContainer = () => {
 
     useEffect(() => {
         // Define the URL of your backend API
-        const apiUrl = 'http://192.168.0.66:4000/api/namespaces/totalnamespaces';
 
         // Fetch data using Axios
-        axios.get(apiUrl)
+        axios.get(apiconfig.apiUrl9)
             .then(response => {
                 // Update the state with the fetched data
                 setNamespace(response.data)

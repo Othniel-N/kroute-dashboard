@@ -6,10 +6,10 @@ const sidebarNav = [
         text: 'Home'
     },
     {
-        link: '/orders',
-        section: 'orders',
-        icon: <i className='bx bx-receipt' ></i>,
-        text: 'Orders'
+        link: '/pendingpods',
+        section: 'pending pods',
+        icon: <i className='bx bx-user'></i>,
+        text: 'Pending Pods'
     },
     {
         link: '/services',
@@ -18,23 +18,23 @@ const sidebarNav = [
         text: 'services'
     },
     {
-        link: '/pendingpods',
-        section: 'pending pods',
-        icon: <i className='bx bx-user'></i>,
-        text: 'Pending Pods'
-    },
-    {
         link: '/alerts',
         section: 'alerts',
         icon: <i className='bx bx-line-chart'></i>,
         text: 'Alerts'
     },
     {
-        link: '/settings',
-        section: 'settings',
-        icon: <i className='bx bx-cog'></i>,
-        text: 'Settings'
-    }
+        link: '/Docs',
+        section: 'orders',
+        icon: <i className='bx bx-receipt' ></i>,
+        text: 'Docs'
+    },
+    // {
+    //     link: '/settings',
+    //     section: 'settings',
+    //     icon: <i className='bx bx-cog'></i>,
+    //     text: 'Settings'
+    // }
     
 ]
 

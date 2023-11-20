@@ -2,7 +2,7 @@ import images from "./images"
 
 const data = {
     user: {
-        name: 'Kroute Dashboard',
+        name: 'Dashboard',
         img: images.avt
     },
     summary: [
